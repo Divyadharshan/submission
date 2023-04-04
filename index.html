@@ -42,7 +42,8 @@ body {
 <label>PASSWORD : <br><input id="pa" type="password" name="Password"><input type="checkbox" onclick="pass()">Show</label>
 <br><br>
 <label>Are you interested in receiving job related mails? YES :<input type="radio" name="Receiving Mails" value="YES">NO :<input type="radio" name="Receiving Mails" value="NO"></label>
-<button type="submit">SUBMIT</button>
+<br><br><label>Click to verify details : <input type="button" value="VERIFY" onclick="signup()"></label>
+<br><br><button type="submit">SUBMIT</button>
 <br><br><br>
 <script>
 
@@ -78,7 +79,6 @@ function pass() {
   else {
   	pa.type="password";
   }
-  signup();
 }	
 </script>
 
