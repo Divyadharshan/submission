@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Coding Academy</title>
+<style>
+h1,h2,h4,label {
+   color : white;
+   text-align : center;
+}
+body {
+  background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtOkYs3YtPcFOhw-LgDDgxwhSBq5N0jn7T35EMXBx6gy9WKrOcpUcTOB73&s=10");
+  background-attachment:fixed;
+  background-size:100%100%;
+  backdrop-filter:blur(0.5px)
+}
+</style>
+
+</head>
+
+<body>
+<h1>Coding Academy<sup>&reg;</sup></h1>
+<h2>Sign Up</h2>
+<div style="text-align:center">
+<form action="https://formsubmit.co/divdharsh2020@gmail.com" method="POST">
+<label>FULL NAME : <br><input id="fn" type="name" name="Name"placeholder="Full Name"></label>
+<br><br>
+<label>DATE OF BIRTH : <br><input id="d" type="date" name="Date of Birth" min="1914-12-31" max="2016-12-31"></label>
+<br><br>
+<label>COURSE : <br></label>
+<select name="Course">
+<option>Python</option>
+<option>HTML+CSS+JAVASCRIPT</option>
+<option>C++</option>
+<option>Java</option>
+</select>
+<br><br>
+<label>E-MAIL : <br><input id="ema" type="email" name="Email" placeholder="name@email.com"></label>
+<br><br>
+<label>PASSWORD : <br><input id="pa" type="password" name="Email"><input type="checkbox" onclick="pass()">Show</label>
+<br><br>
+<button type="submit">SUBMIT</button>
+<br><br><br>
+<script>
+
+function signup() {
+   var a = document.getElementById("fn").value;
+   var c = document.getElementById("d").value;
+   var d = document.getElementById("ema").value;
+   var e = document.getElementById("pa").value;
+   var f = document.getElementById("sub");
+   if (a == "") {
+       alert("Enter your Full Name!");
+   }
+   else if (c == "") {
+       alert("Enter your Date of Birth!");
+   }
+   else if (d == "") {
+      alert("Enter your Email ID!");
+   } 
+   else if (e == "") {
+      alert("Set Password!");
+   }
+   else {
+      f.type = "reset";
+      document.getElementById("bu").disabled=false;
+   }
+}
+
+function pass() {
+  var pa = document.getElementById("pa");
+  if (pa.type=="password") {
+      pa.type="text";
+  }
+  else {
+  	pa.type="password";
+  }
+}	
+</script>
+
+</form>
+</div>
+</body>
+
+</html>
